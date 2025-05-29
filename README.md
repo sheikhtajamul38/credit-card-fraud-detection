@@ -1,48 +1,43 @@
-# Credit Card Fraud Detection
+````markdown
+# Обнаружение мошенничества с кредитными картами
 
-A end-to-end pipeline for detecting fraudulent credit-card transactions using machine learning. This project covers data exploration, feature engineering, model training/comparison, and a FastAPI endpoint for real-time scoring.
+Конечная система для выявления мошеннических операций по кредитным картам с помощью машинного обучения. Проект охватывает исследование данных, инженерную разработку признаков и обучение/сравнение моделей.
 
-## 🚀 Features
+## 🚀 Возможности
 
-* **EDA & Visualization**: Class imbalance, amount distributions, temporal & geographic patterns
-* **Feature Engineering**: Customer age, hour/day features, geodesic distance, tx-per-card, merchant fraud rate
-* **Models**:
+* **EDA & Визуализация**: Дисбаланс классов, распределение сумм, временные и географические закономерности  
+* **Инженерия признаков**: Возраст клиента, признаки часа/дня, геодезическое расстояние, количество транзакций на карту, уровень мошенничества у торговца  
+* **Модели**:  
+  * XGBoost (без калибровки и с изотонической калибровкой)  
+  * LightGBM  
+  * CatBoost  
+  * Random Forest  
+* **Оценка**: Точность/Полнота/F1 для класса мошенничества, матрицы неточностей, обобщённый рейтинг  
+* **Развертывание**: Сохранённая модель и метаданные  
 
-  * XGBoost (raw & isotonic-calibrated)
-  * LightGBM
-  * CatBoost
-  * Random Forest
-* **Evaluation**: Precision/Recall/F1 on fraud class, confusion matrices, composite ranking
-* **Deployment**: Saved model & metadata, FastAPI for live predictions
-
-## 📦 Installation
+## 📦 Установка
 
 ```bash
-git clone [https://github.com/your-org/fraud-detection.git](https://github.com/sheikhtajamul38/credit-card-fraud-detection/)
-```
+git clone https://github.com/your-org/fraud-detection.git
+````
 
-## ⚙️ Usage
+## ⚙️ Использование
 
-1. **Notebook**
+1. **Блокнот**
 
    ```bash
    jupyter notebook credit-card-fraud-detection.ipynb
    ```
-2. **Train & Compare**
-   Runs all models and saves `model_comparison.csv`.
+2. **Обучение и сравнение**
+   Запускает все модели и сохраняет `model_comparison.csv`.
 
+## 📊 Результаты
 
-## 📊 Results
-
-* **Best F1 (fraud)**: Calibrated XGBoost (\~0.40)
-* **High Recall**: Raw XGBoost (\~0.95)
-* **Balanced Trade-off**: LightGBM & CatBoost
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Implement changes and tests
-4. Open a pull request for review
+* **Лучший F1 (мошенничество)**: Калиброванный XGBoost (\~0.40)
+* **Высокая полнота**: Чистый XGBoost (\~0.95)
+* **Сбалансированный компромисс**: LightGBM & CatBoost
 
 © 2025 Fraud Detection Project
+
+```
+```
