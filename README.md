@@ -18,7 +18,7 @@
 ## 📦 Установка
 
 ```bash
-git clone https://github.com/your-org/fraud-detection.git
+git clone https://github.com/sheikhtajamul38/fraud-detection.git
 ````
 
 ## ⚙️ Использование
